@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof. Fernando Eduardo Nuno</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .content-section {
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            
+            .sidebar.open {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Mobile Menu Button -->
+    <button id="menuBtn" class="md:hidden fixed top-4 left-4 z-50 bg-blue-600 text-white p-2 rounded">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+    </button>
+
+    <!-- Sidebar -->
+    <nav class="sidebar fixed top-0 left-0 h-full w-64 bg-blue-800 text-white p-6 z-40">
+        <div class="mb-8">
+            <h2 class="text-xl font-bold">Prof. F. E. Nuno</h2>
+        </div>
+        <ul class="space-y-4">
+            <li>
+                <button class="nav-link w-full text-left py-2 px-4 hover:bg-blue-700 rounded" data-section="home">Home</button>
+            </li>
+            <li>
+                <button class="nav-link w-full text-left py-2 px-4 hover:bg-blue-700 rounded" data-section="about">About</button>
+            </li>
+            <li>
+                <button class="nav-link w-full text-left py-2 px-4 hover:bg-blue-700 rounded" data-section="experience">Experience</button>
+            </li>
+            <li>
+                <button class="nav-link w-full text-left py-2 px-4 hover:bg-blue-700 rounded" data-section="publications">Publications</button>
+            </li>
+            <li>
+                <button class="nav-link w-full text-left py-2 px-4 hover:bg-blue-700 rounded" data-section="contact">Contact</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="ml-0 md:ml-64 min-h-screen">
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <div class="hero-section h-screen flex items-center justify-center text-white">
+                <div class="text-center">
+                    <img src="/api/placeholder/200/200" alt="Prof. Fernando Eduardo Nuno" class="rounded-full mx-auto mb-8 border-4 border-white">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Prof. Fernando Eduardo Nuno</h1>
+                    <p class="text-xl md:text-2xl">Educator | Researcher | Business Management Instructor</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section p-8">
+            <h2 class="text-3xl font-bold mb-6">About</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <p class="mb-4">Prof. Fernando Eduardo Nuno is a distinguished professor with a rich academic and professional background. With years of experience in teaching business management, he has contributed significantly to shaping the careers of many students and professionals.</p>
+                <p class="mb-4">His expertise lies in strategic management, leadership, and organizational behavior. Having worked with several educational institutions and corporate entities, Prof. Nuno bridges the gap between theoretical knowledge and practical application.</p>
+                <p>His research interests include business innovation, operational efficiency, and sustainable management practices.</p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="content-section p-8">
+            <h2 class="text-3xl font-bold mb-6">Experience</h2>
+            <div class="grid gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Business Management Instructor</h3>
+                    <ul class="list-disc ml-6 space-y-2">
+                        <li>Developed comprehensive business curricula for undergraduate and postgraduate students</li>
+                        <li>Designed and conducted executive training programs for corporate professionals</li>
+                        <li>Supervised and guided numerous thesis projects focused on innovation and management</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Consultant</h3>
+                    <ul class="list-disc ml-6 space-y-2">
+                        <li>Advising corporations on organizational restructuring and operational efficiency</li>
+                        <li>Conducting workshops and training sessions for leadership development</li>
+                        <li>Assisting startups in developing sustainable business models and strategic growth plans</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="content-section p-8">
+            <h2 class="text-3xl font-bold mb-6">Publications & Research</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Strategic Business Models</h3>
+                        <p>Analyzing emerging business models and their adaptation to market trends.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Organizational Leadership & Growth</h3>
+                        <p>Examining leadership styles and their influence on corporate success.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Impact of Technology on Business Management</h3>
+                        <p>Exploring how digital transformation reshapes business strategies and operations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section p-8">
+            <h2 class="text-3xl font-bold mb-6">Contact</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-lg font-semibold">Email</h3>
+                        <a href="mailto:fe_nuno@yahoo.com" class="text-blue-600 hover:underline">fe_nuno@yahoo.com</a>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold">LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/prof-f-ed-nuno-34569339" target="_blank" class="text-blue-600 hover:underline">Professional Profile</a>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold">Address</h3>
+                        <p>360 South Blackberry Lane</p>
+                        <p>Anaheim, CA 92808</p>
+                        <p>USA</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const sidebar = document.querySelector('.sidebar');
+        
+        menuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+
+        // Navigation
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.content-section');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const sectionId = link.getAttribute('data-section');
+                
+                // Hide all sections
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // Show selected section
+                document.getElementById(sectionId).classList.add('active');
+                
+                // Close mobile menu if open
+                if (window.innerWidth < 768) {
+                    sidebar.classList.remove('open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
