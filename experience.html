@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof. Fernando Eduardo Nuno - Education</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        .timeline {
+            position: relative;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #1E40AF;
+        }
+        
+        .timeline-card {
+            position: relative;
+            margin-left: 20px;
+            padding-left: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .timeline-card::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 24px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #1E40AF;
+            border: 2px solid white;
+        }
+        
+        .timeline-card:hover {
+            transform: translateX(10px);
+        }
+        
+        .award-badge {
+            transition: all 0.3s ease;
+        }
+        
+        .award-badge:hover {
+            transform: scale(1.05);
+            background-color: #1E40AF;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <section id="education" class="p-8 max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold mb-12 text-center text-blue-900" data-aos="fade-down">
+            Academic Journey
+        </h2>
+
+        <div class="timeline">
+            <!-- Ph.D. -->
+            <div class="timeline-card mb-12" data-aos="fade-left">
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-blue-900">Doctor of Philosophy (Ph.D.)</h3>
+                        <span class="text-gray-600">1988 - Present</span>
+                    </div>
+                    <p class="text-lg text-blue-800 mb-2">University of California, Riverside</p>
+                    <p class="text-gray-700 mb-4">Field: Education</p>
+                    
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-blue-900 mb-2">Awards & Recognition</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="award-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                                University of California Fellow
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Master of Arts -->
+            <div class="timeline-card mb-12" data-aos="fade-left" data-aos-delay="100">
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-blue-900">Master of Arts</h3>
+                        <span class="text-gray-600">1983</span>
+                    </div>
+                    <p class="text-lg text-blue-800 mb-2">UCLA Center for Latin American Studies</p>
+                    <p class="text-gray-700 mb-4">Field: Latin American Studies / International Management</p>
+                    
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-blue-900 mb-2">Thesis</h4>
+                        <p class="text-gray-700 italic">"The Development of Management Education in Mexico"</p>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-blue-900 mb-2">Awards & Recognition</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="award-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                                UCLA Tinker Foundation Fellow
+                            </span>
+                            <span class="award-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                                UCLA CSC Merit Award
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MBA -->
+            <div class="timeline-card mb-12" data-aos="fade-left" data-aos-delay="200">
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-blue-900">Master of Business Administration (MBA)</h3>
+                        <span class="text-gray-600">1980</span>
+                    </div>
+                    <p class="text-lg text-blue-800 mb-2">UCLA Anderson Graduate School of Management</p>
+                    <p class="text-gray-700 mb-4">Concentration: International Management</p>
+                    
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-blue-900 mb-2">Thesis</h4>
+                        <p class="text-gray-700 italic">"Consulting Analysis and Recommendations: Apparel Industry Trade Shows and Magazines"</p>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-blue-900 mb-2">Awards & Recognition</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="award-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                                UCLA/GSM Recognition Award
+                            </span>
+                            <span class="award-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                                UCLA CSC Merit Award
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bachelor's -->
+            <div class="timeline-card mb-12" data-aos="fade-left" data-aos-delay="300">
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-blue-900">Bachelor of Arts Cum Laude</h3>
+                        <span class="text-gray-600">1976</span>
+                    </div>
+                    <p class="text-lg text-blue-800 mb-2">UCLA College of Letters and Science Honors Program</p>
+                    <p class="text-gray-700 mb-4">Major: Political Science / Psychology minor</p>
+                    
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-blue-900 mb-2">Awards & Recognition</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="award-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                                UCLA Outstanding Senior Finalist Award
+                            </span>
+                            <span class="award-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                                University of California Regents Scholar
+                            </span>
+                            <span class="award-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                                California State Fellowship
+                            </span>
+                            <span class="award-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                                UCLA Dean of Letters and Science Honor List
+                            </span>
+                            <span class="award-badge bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                                UCLA Political Science Honor Society
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Credentials -->
+            <div class="timeline-card" data-aos="fade-left" data-aos-delay="400">
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Professional Credentials</h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-lg font-semibold text-blue-800">California Community College Supervisor Credential</p>
+                            <p class="text-gray-600">Issued: February 1989</p>
+                        </div>
+                        
+                        <div>
+                            <p class="text-lg font-semibold text-blue-800">California Community College Instructor Credential</p>
+                            <p class="text-gray-600">Issued: June 1982</p>
+                            <p class="text-gray-700 mt-2">Subjects:</p>
+                            <ul class="list-disc list-inside text-gray-700 ml-4">
+                                <li>Business and Industrial Management</li>
+                                <li>Ethnic Studies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
