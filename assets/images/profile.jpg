@@ -1,0 +1,3 @@
+git add assets/images/profile.jpg assets/images/background.jpg
+git commit -m "Added profile and background images"
+git push
