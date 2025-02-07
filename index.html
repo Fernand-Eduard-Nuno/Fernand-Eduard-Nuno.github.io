@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Profile</title>
+    <title>My Portfolio</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
         * {
@@ -52,24 +52,50 @@
             opacity: 0.8;
         }
 
-        .section {
+        section {
             padding: 5rem 2rem;
             max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section h2 {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .content-box {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 5rem auto;
             opacity: 0;
             transform: translateY(20px);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .content {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .experience-card, .education-card, .publication-card {
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+            margin-bottom: 1rem;
+        }
+
+        .experience-card:hover, .education-card:hover, .publication-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            display: block;
+            margin: 0.5rem 0;
+            text-decoration: none;
+            color: #6366f1;
+            font-weight: bold;
         }
 
         @media (max-width: 768px) {
@@ -82,7 +108,7 @@
 <body>
     <header class="header">
         <nav class="nav">
-            <div class="logo">Your Logo</div>
+            <div class="logo">My Portfolio</div>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#education">Education</a>
@@ -93,51 +119,86 @@
         </nav>
     </header>
 
-    <section class="section" id="about">
-        <div class="content-box">
-            <h2>About</h2>
-            <p>Write about yourself here.</p>
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p class="content">I am a passionate professional with experience in various fields, dedicated to learning and innovation.</p>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="education-card">
+            <h3>Master's in Business Administration</h3>
+            <p>XYZ University, 2018-2020</p>
+        </div>
+        <div class="education-card">
+            <h3>Bachelor's in Computer Science</h3>
+            <p>ABC College, 2014-2018</p>
         </div>
     </section>
 
-    <section class="section" id="education">
-        <div class="content-box">
-            <h2>Education</h2>
-            <p>List your education history here.</p>
+    <section id="experience">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="experience-card">
+            <h3>Senior Software Engineer</h3>
+            <p>Company A | 2021 - Present</p>
+            <p>Developing scalable web applications and leading software projects.</p>
+        </div>
+        <div class="experience-card">
+            <h3>Software Developer</h3>
+            <p>Company B | 2018 - 2021</p>
+            <p>Worked on frontend and backend development using modern technologies.</p>
         </div>
     </section>
 
-    <section class="section" id="experience">
-        <div class="content-box">
-            <h2>Experience</h2>
-            <p>Detail your work experience here.</p>
+    <section id="publications">
+        <h2 class="section-title">Publications</h2>
+        <div class="publication-card">
+            <h3>Research Paper on AI & Machine Learning</h3>
+            <p>Published in XYZ Journal, 2023</p>
+        </div>
+        <div class="publication-card">
+            <h3>Article on Cloud Computing</h3>
+            <p>Tech Magazine, 2021</p>
         </div>
     </section>
 
-    <section class="section" id="publications">
-        <div class="content-box">
-            <h2>Publications</h2>
-            <p>List your publications here.</p>
-        </div>
-    </section>
-
-    <section class="section" id="contact">
-        <div class="content-box">
-            <h2>Contact</h2>
-            <p>Provide your contact information here.</p>
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact">
+            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+            <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a></p>
         </div>
     </section>
 
     <script>
-        // Animation on page load
+        // Animate sections on scroll
         window.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('.content-box');
+            const sections = document.querySelectorAll('section');
             sections.forEach((section, index) => {
                 gsap.to(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                    },
                     opacity: 1,
                     y: 0,
                     duration: 1,
-                    delay: index * 0.3
+                    delay: index * 0.2
+                });
+            });
+
+            const cards = document.querySelectorAll('.experience-card, .education-card, .publication-card');
+            cards.forEach((card, index) => {
+                gsap.to(card, {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top bottom-=100",
+                    },
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.6,
+                    delay: index * 0.2
                 });
             });
         });
