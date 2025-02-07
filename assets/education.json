@@ -1,0 +1,18 @@
+[
+    {
+        "degree": "Master of Business Administration (MBA)",
+        "year": "1980",
+        "institution": "UCLA Anderson Graduate School of Management",
+        "field": "International Management",
+        "thesis": "Consulting Analysis and Recommendations: Apparel Industry Trade Shows and Magazines",
+        "awards": ["UCLA/GSM Recognition Award", "UCLA CSC Merit Award"]
+    },
+    {
+        "degree": "Master of Arts",
+        "year": "1983",
+        "institution": "UCLA Center for Latin American Studies",
+        "field": "Latin American Studies / International Management",
+        "thesis": "The Development of Management Education in Mexico",
+        "awards": ["UCLA Tinker Foundation Fellow", "UCLA CSC Merit Award"]
+    }
+]
