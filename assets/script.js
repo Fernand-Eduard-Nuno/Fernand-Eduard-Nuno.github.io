@@ -1,26 +1,25 @@
-// JavaScript for smooth scrolling to sections
-document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll("nav ul li a");
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("education.json")
+    .then(response => response.json())
+    .then(data => {
+        let timeline = document.querySelector(".timeline");
+        timeline.innerHTML = ""; // Clear static content
 
-    links.forEach(link => {
-        link.addEventListener("click", function (event) {
-            if (this.getAttribute("href").startsWith("#")) {
-                event.preventDefault();
-                const targetId = this.getAttribute("href").substring(1);
-                const targetSection = document.getElementById(targetId);
-                
-                if (targetSection) {
-                    window.scrollTo({
-                        top: targetSection.offsetTop - 50,
-                        behavior: "smooth"
-                    });
-                }
-            }
+        data.forEach(item => {
+            let html = `
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h2>${item.degree} <span>${item.year}</span></h2>
+                        <p><strong>${item.institution}</strong></p>
+                        <p>Field: ${item.field}</p>
+                        <h3>Thesis</h3>
+                        <p><i>"${item.thesis}"</i></p>
+                        <h3>Awards & Recognition</h3>
+                        ${item.awards.map(award => `<span class="award">${award}</span>`).join("")}
+                    </div>
+                </div>
+            `;
+            timeline.innerHTML += html;
         });
     });
-});
-
-// Update year dynamically in footer
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("year").textContent = new Date().getFullYear();
 });
